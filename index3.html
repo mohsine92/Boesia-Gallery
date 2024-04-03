@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.pinimg.com/564x/45/df/bd/45dfbd3bd869d8ff8ab455e160bb4454.jpg">
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+
+ 
+    <!--<nav-page>
+        <img src="https://i.pinimg.com/564x/f0/31/1e/f0311e313893637125f68e88ce12cce4.jpg" class="nav-logo">
+    </nav-page>--->
+
+<!--Mobile Version-->
+
+
+<a href="./index.html">
+    <div id="text-wrapper">
+    <!-- <h1>aRT X web</h1>-->
+     <h1>Gallery</h1>
+     <h1>Gallery</h1>
+     <h1>Gallery</h1>
+   </div>
+</a>
+<p class="intro">LAST UPDATE APRIL 2024 </p>
+    <div class="loader-gallery">Gallery</div>
+    <div id="gallery-phone">
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+        <div class="bloki"></div>
+
+
+    </div>
+    
+
+
+    <footer>
+        <nav>
+                <ul class ="nav-links">
+                  <li><a href="./index.html">HOME ↗︎</a></li> <br>
+                  </ul>
+        </nav>
+
+
+        <nav>
+            <div class="outro">
+               <li><h6 class="credit"> credit</h6></li>
+<li class="linkedin"> <a href="https://www.linkedin.com/in/mohsine-e-44368b1a0/">LinkedIn</a></li>
+ <li class="mail"><a href="mailto:mohsineessatpro@gmail.com">Email</a></li> 
+ <li><a href="https://mohsine92.github.io/m-artweb-/">Portofolio</a><li> <br>
+ <p class="link">©2024 BoesiaGallery</a>
+    <p></p>
+ </div>
+        </nav>
+
+       <div id="text-wrapper2">
+         <h1>Gallery</h1>
+         <h1>Gallery</h1>
+         <h1>Gallery</h1>
+       </div>            
+      </footer>
+
+</body>    
+<script>
+
+      TweenMax.to(".loader-gallery", 1, {
+        x: 2,
+        opacity: 0,
+        ease: Expo.easeInOut,
+        delay: 1.6,
+      });
+
+
+      
+      TweenMax.staggerFrom(
+        "#text-wrapper, #text-wrapper2",
+        2,
+        {
+          opacity: 0,
+          y: 30,
+          ease: Expo.easeInOut,
+          delay: 3,
+        },
+        0.06
+      );
+
+
+      TweenMax.staggerFrom(
+        "#gallery-phone, .bloki, .intro, .nav-links, .box1,.outro",
+        2,
+        {
+          opacity: 0,
+          y: 30,
+          rotation:80,
+          ease: Expo.easeInOut,
+          delay: 3,
+        },
+        0.06
+      );
+
+
+
+      TweenMax.staggerFrom(
+        ".intro",
+      2, {
+         x: -300, 
+          y: 30,
+          ease: Expo.easeInOut,
+          delay: 3,
+          
+        })
+
+
+    
+
+
+        const tl = gsap.timeline({
+  scrollTrigger: {
+    trigger: ".trigger",
+    start: "top top",
+    end: "+=1000",
+    scrub: 1,
+    pin: true,
+    markers: true
+  }
+});
+tl.to(".intro", {yPercent: 10, duration: 1})
+tl.to(".intro", {rotation: 10, duration: 3})
+tl.to(".intro", {xPercent: 10, duration: 1})
+
+
+
+</script>
+   

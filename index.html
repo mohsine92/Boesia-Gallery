@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boesia Gallery</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="mediaqueries.css"/>
+    <link rel="icon" href="https://i.pinimg.com/564x/45/df/bd/45dfbd3bd869d8ff8ab455e160bb4454.jpg">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+  </head>
+  <body>
+    <div class="wrapper">
+      <div class="nav">
+        <a class="link">©2024 BoesiaGallery, developped by Mohsine Essat.</a>
+        <a class="link">Boesia Gallery</a>
+    </div>
+      <div class="about">
+        <p>
+          self-taught photographer passionate about the art of photography, I welcome you to my gallery in which 
+          I share with you some shots from my latest film. ENJOY THE EXPERIENCE, ENJOY MY ART.
+            
+        </p>
+      </div>
+
+      <div class="wrapper-img">
+        <div class="box"></div>
+        <div>
+            <img src="https://i.pinimg.com/564x/77/14/a4/7714a4eaa61a49f9560936ae0b87edbf.jpg" class="image-home">
+        </div>
+      </div>
+      <div class="sub-header">
+        <a href="mailto:mohsineessatpro@gmail.com" class="contact-link">&#8618; Wanna be starting something ?</a>
+        <a href="https://mohsine92.github.io/m-artweb-/" class="work-link"> built by Mohsine Essat</a>
+        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
+        <div class="button" onclick="location.href='./gallery.html'"> GALLERY</div>
+        <div class="button-phone" onclick="location.href='./index3.html'"> GALLERY</div>
+
+
+      </div> 
+
+    </div>
+    
+  
+<div class="container">
+    <div class="loader">art is coming please wait ...</div>
+    <div class="overlay">
+      <div class="blockk blockk-1"></div>
+      <div class="blockk blockk-2"></div>
+      <div class="blockk blockk-3"></div>
+      <div class="blockk blockk-4"></div>
+      <div class="blockk blockk-5"></div>
+      <div class="blockk blockk-6"></div>
+      <div class="blockk blockk-7"></div>
+      <div class="blockk blockk-8"></div>
+      <div class="blockk blockk-9"></div>
+      <div class="blockk blockk-10"></div>
+      <div class="blockk blockk-11"></div>
+      <div class="blockk blockk-12"></div>
+      <div class="blockk blockk-13"></div>
+      <div class="blockk blockk-14"></div>
+      <div class="blockk blockk-15"></div>
+      <div class="blockk blockk-16"></div>
+      <div class="blockk blockk-17"></div>
+      <div class="blockk blockk-18"></div>
+      <div class="blockk blockk-19"></div>
+      <div class="blockk blockk-20"></div>
+    </div>
+  </div>
+  
+
+    <script>
+//Gallery
+
+      TweenMax.staggerFrom(
+        ".blockk",
+        0.8,
+        {
+          width: "0%",
+          ease: Power1.easeIn,
+          delay: 2,
+        },
+        0.04
+      );
+
+      TweenMax.to(".loader", 1, {
+        x: 2,
+        opacity: 0,
+        ease: Expo.easeInOut,
+        delay: 1.6,
+      });
+
+      TweenMax.staggerFrom(
+        ".nav > a, .about p, .sub-header,clock> a,img-home",
+        2,
+        {
+          opacity: 0,
+          y: 30,
+          ease: Expo.easeInOut,
+          delay: 3,
+        },
+        0.06
+      );
+
+     TweenMax.to(".box", 0.2, {
+        opacity: 1,
+        ease: Expo.easeInOut,
+        delay: 3.8,
+
+      });
+
+      TweenMax.to("img", 0.2, {
+        opacity: 1,
+        ease: Expo.easeInOut,
+        delay: 3.8,
+      });
+
+      TweenMax.to(".box", 2.4, {
+        y: "-100%",
+        ease: Expo.easeInOut,
+        delay: 4,
+        opacity:0,
+     });
+
+
+
+
+
+  //O'Clock
+
+  document.addEventListener("DOMContentLoaded", function () {
+    // Initialisez AOS
+    AOS.init({
+      once: true, // Animation ne se reproduit qu'une fois
+    });
+  });
+  
+
+  function showTime(){ 
+    var location = "PARIS," 
+    var date = new Date(); 
+    var h = date.getHours(); // 0 - 23 
+    var m = date.getMinutes(); // 0 - 59 
+    var s = date.getSeconds(); // 0 - 59 
+    var session = "AM"; 
+    
+    if(h == 0){ 
+        h = 12; 
+    }
+    
+    if(h > 12){ 
+        h = h - 12; 
+        session = "PM"; 
+    }
+    
+    h = (h < 10) ? "0" + h : h; 
+    m = (m < 10) ? "0" + m : m;
+    s = (s < 10) ? "0" + s : s;
+    
+    var time = location + " " + h + ":" + m + ":" + s + " " + session;
+    
+    document.getElementById("MyClockDisplay").innerText = time;
+    document.getElementById("MyClockDisplay").textContent = time;
+    
+    setTimeout(showTime, 1000);
+    
+}
+
+showTime();
+
+    
+
+let $text = $('.text'),
+	$text1 = new SplitText($text.eq(0), {type:"words,chars"}), 
+    chars1 = $text1.chars;
+let	$text2 = new SplitText($text.eq(1), {type:"words,chars"}), 
+    chars2 = $text2.chars;
+
+
+let tlHover = new TimelineMax({paused:true})
+	.staggerTo(chars1, 0.8, {yPercent: -100, ease:  Power3.easeInOut}, 0.03)
+	.staggerFrom(chars2, 0.8, {yPercent: 100, ease:  Power3.easeInOut}, 0.03,.1);
+
+$text.hover(function(){
+	tlHover.play();
+}, function(){
+	
+	tlHover.reverse();
+})
+    </script>
+  </body>
+</html>

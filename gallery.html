@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Gallery - BoesiaGallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="https://i.pinimg.com/564x/45/df/bd/45dfbd3bd869d8ff8ab455e160bb4454.jpg">
+    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
+</head>
+<body>
+
+
+
+  
+    <div class="container">
+        <div class="loader">Gallery</div>
+        <div class="blox blox-1"></div>
+        <div class="blox blox-2"></div>
+        <div class="blox blox-3"></div>
+        <div class="blox blox-4"></div>
+        <div class="blox blox-5"></div>
+        <div class="blox blox-6"></div>
+        <div class="blox blox-7"></div>
+        <div class="blox blox-8"></div>
+        <div class="blox blox-9"></div>
+        <div class="blox blox-10"></div>
+        <div class="blox blox-11"></div>
+        <div class="blox blox-12"></div>
+        <div class="blox blox-13"></div>
+        <div class="blox blox-14"></div>
+        <div class="blox blox-15"></div>
+        <div class="blox blox-16"></div>
+        <div class="blox blox-17"></div>
+        <div class="blox blox-18"></div>
+        <div class="blox blox-19"></div>
+        <div class="blox blox-20"></div>
+        </div>
+      </div>
+ 
+
+      <!--Desktop Version-->
+    <div class="nav">
+<div id="art">
+    <div id="gallery">
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+        <div class="block"></div>
+    </div>
+</div>
+    </div>
+  
+
+
+
+
+
+    <script>
+
+
+//Loader
+
+
+
+TweenMax.staggerFrom(
+        ".blox",
+        0.8,
+        {
+          width: "0%",
+          rotation:30,
+          ease: Power1.easeIn,
+          delay: 2,
+        },
+        0.04
+      );
+
+
+      TweenMax.to(".loader", 1, {
+        x: 2,
+        opacity: 0,
+        ease: Expo.easeInOut,
+        delay: 1.6,
+      });
+
+
+      TweenMax.staggerFrom(
+        "#gallery",
+        2,
+        {
+          opacity: 0,
+          y: 30,
+          ease: Expo.easeInOut,
+          delay: 3,
+        },
+        0.06
+      );
+
+
+//Gallery 
+
+
+const gallery = document.getElementById("gallery");
+
+
+
+window.onmousemove = (e) => {
+    const mouseX = e.clientX,
+    mouseY = e.clientY;
+
+    const xDecimal = mouseX / window.innerWidth,
+    yDecimal = mouseY / window.innerHeight;
+
+    const maxX = gallery.offsetWidth - window.innerWidth,
+    maxY = gallery.offsetHeight - window.innerHeight;
+
+const panX = maxX - xDecimal * 1000,
+panY = maxY - yDecimal * 1800;
+
+gallery.animate(
+    {
+        transform: `translate(${panX}px, ${panY}px)`,
+    },
+    {
+        duration: 5000,
+        fill: "forwards",
+        easing: "ease",
+    }
+);
+};
+
+const radius =300,
+blocks = document.querySelectorAll(".block"),
+radius2 = radius * radius,
+container = document.querySelector("#gallery");
+
+blocks.forEach((block) => {
+let b = block.getBoundingClientRect();
+(block.cx = b.left + b.width / 2 + window.pageXOffset),
+(block.cy = b.top + b.height / 2 + window.pageYOffset);
+
+block.tween = gsap.to(block, {
+    scale:  maxScale,
+    ease: "power1.in",
+    paused: true,
+})
+.progress(0)
+.progress(0);
+
+document.addEventListener("mousemove", (e) => {
+    let i = blocks.length,
+     dx,
+     dy,
+     block;
+
+     while(i--) {
+        block = blocks[i];
+        dx = (block.cx - e.pageX) ** 2;
+        dy = (blocks.cy - e.pageY) ** 2;
+        block.tween.progress(1 - (dx + dy) / radius2);
+     }
+
+ });
+
+});
+
+
+
+
+
+
+
+    </script>
+    </body>
+</html>

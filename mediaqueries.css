@@ -1,0 +1,180 @@
+@media screen and (max-width: 1400px) {
+    .bloki {
+        display: none;
+       }
+     
+    
+       .button-phone {
+        display: none;
+       }
+
+}
+
+
+@media screen and (max-width: 1200px) {
+  
+
+   .bloki {
+    display: none;
+   }
+
+   .button-phone {
+    display: none;
+   }
+   
+
+    .nav a:first-child {
+        font-size: 18px;   
+         }
+
+    .wrapper-img {
+        width: 50%;
+    }
+
+    .image-home {
+        margin-top: 50%;
+        height: 50%;
+        width: 50%;
+        }
+
+        .clock {
+            display: none;
+        }
+
+        .about {
+            font-size: 15px;
+            margin: 10%;
+            text-align: end;
+            }
+            
+
+}
+
+@media screen and (max-width: 600px) {
+
+
+
+.loader {
+    font-size: 10px;
+    text-align: center;
+    margin: 0%;
+    font-weight: 100;
+}
+
+
+.loader-gallery {
+font-size: 40px;
+}
+
+.wrapper-img {
+    width: 50%;
+}
+.wrapper {
+    overflow: hidden;
+    position: fixed;
+}
+
+
+.image-home {
+margin-top: 150%;
+height: 100%;
+width: 100%;
+}
+
+.box {
+    height: 100%;
+width: 100%;
+background: none;
+}
+
+
+    .nav a {
+        font-size: 40px;
+    }
+
+    .nav {
+        gap:1rem;
+    }
+
+    .nav a:first-child {
+font-size: 18px;   
+ }
+
+ .sub-header {
+    font-size: 5px;
+    margin: 0%;
+    display: flex;
+    gap: 3rem;
+ }
+
+
+ .sub-header a {
+    font-size: 13px;
+ }
+ .button {
+    display: none;
+ }
+
+.button-phone {
+    display: flex;
+ font-weight: 300;
+ font-size: 15px;
+ letter-spacing: -1px;
+
+}
+
+
+.work-link {
+    font-weight: 300;
+
+}
+
+a.contact-link {
+    font-weight: 300;
+    font-size: 15px;
+    letter-spacing: -2px;
+}
+
+ .button-phone,
+ a.contact-link {
+    animation: none;
+    display: flex;
+ }
+
+ .work-link {
+    font-size: 15px;
+    text-align: center;
+ }
+
+ .clock {
+display: none;
+ }
+
+
+.button-phone {
+    display: flex;
+}
+
+.bloki{
+    display: flex;
+}
+
+#gallery{
+    display: none;
+}
+
+.block {
+    display: none;
+}
+
+
+
+ .about {
+font-size: 15px;
+margin: 10%;
+text-align: end;
+}
+
+
+
+}

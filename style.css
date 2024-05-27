@@ -263,7 +263,7 @@ animation: letter-breathe 5s infinite;
     width:5%;
     height: 100%;
     /*background: linear-gradient(rgb(248, 234, 228), rgb(48, 37, 37));*/
-    background: linear-gradient( /*rgb(235, 255, 102)*/ yellow 20%, rgb(255, 255, 255) 50% );
+    background: linear-gradient( /*rgb(235, 255, 102)*/ rgb(159, 159, 86) 35%, rgb(255, 255, 255) 60% );
         border-top: none;
     border-bottom: none;
     /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233); */

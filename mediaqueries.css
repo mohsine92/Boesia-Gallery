@@ -78,7 +78,7 @@ font-size: 40px;
 .image-home {
     box-shadow: none;
     position: sticky;
-margin-top: 60%;
+margin-top: 100%;
 height: 60%;
 width: 100%;
 }
@@ -108,7 +108,7 @@ font-size: 18px;
     font-size: 5px;
     margin: 0%;
     padding: 50px;
-    bottom: 20%;
+    bottom: 5%;
  }
 
 

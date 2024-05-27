@@ -76,8 +76,10 @@ font-size: 40px;
 
 
 .image-home {
-margin-top: 140%;
-height: 100%;
+    box-shadow: none;
+    position: sticky;
+margin-top: 60%;
+height: 60%;
 width: 100%;
 }
 
@@ -101,22 +103,25 @@ font-size: 18px;
  }
 
  .sub-header {
+    display: block;
+    text-align: center;
     font-size: 5px;
     margin: 0%;
-    display: flex;
-    gap: 1rem;
+    padding: 50px;
+    bottom: 20%;
  }
 
 
  .sub-header a {
-    font-size: 13px;
+    text-align: center;
+    font-size: 14px;
  }
  .button {
     display: none;
  }
 
 .button-phone {
-    display: flex;
+    text-align: center;
  font-weight: 300;
  font-size: 15px;
  letter-spacing: -1px;
@@ -126,24 +131,28 @@ font-size: 18px;
 
 .work-link {
     font-weight: 300;
+    text-align: center;
 
 }
 
 a.contact-link {
+margin-bottom: 2px;
+    text-align: center;
     font-weight: 300;
-    font-size: 13px;
-    letter-spacing: -2px;
-    margin: 0%;
+    font-size: 15px;
+    letter-spacing: -1px;
 }
 
  .button-phone,
  a.contact-link {
+    display: block;
     animation: none;
-    display: flex;
+    margin: 10px;
+
  }
 
  .work-link {
-    font-size: 15px;
+    font-size: 17px;
     text-align: center;
  }
 
@@ -152,9 +161,7 @@ display: none;
  }
 
 
-.button-phone {
-    display: flex;
-}
+
 
 .bloki{
     display: flex;

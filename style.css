@@ -261,8 +261,8 @@ animation: letter-breathe 5s infinite;
 .blockk {
     position: fixed;
     width:5%;
-    height: 100%;
-    background: linear-gradient( rgb(235, 255, 102) , rgb(255, 255, 255) 60% );
+    height: 90%;
+    background: linear-gradient( rgb(208, 208, 131) 0 , rgb(255, 255, 255) 95% );
         border-top: none;
     border-bottom: none;
     /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233); */
@@ -356,7 +356,7 @@ animation: letter-breathe 5s infinite;
     width:5%;
     height: 100%;
     /*background: linear-gradient(rgb(248, 234, 228), rgb(48, 37, 37));*/
-    background: linear-gradient( /*rgb(235, 255, 102)*/ rgb(255, 255, 255) 20%, rgb(191, 191, 191) 50% ) ;
+    background: linear-gradient( /*rgb(235, 255, 102)*/ rgb(255, 255, 255) 20%, rgb(208, 208, 131) 100% ) ;
         border-top: none;
     border-bottom: none;
     /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233); */

@@ -176,7 +176,7 @@ a.aboutme {
     color: #000000;
     text-align: center;
     font-weight: 100;
-cursor: pointer;
+cursor: wait;
 font-family: "Inter", sans-serif;
 animation: letter-breathe 5s infinite;
 }
@@ -219,7 +219,7 @@ animation: letter-breathe 5s infinite;
         color: #000000;
         text-align: center;
         font-weight: 100;
-    cursor: pointer;
+    cursor: wait;
     font-family: "Inter", sans-serif;
     animation: letter-breathe 5s infinite;
     }
@@ -262,8 +262,7 @@ animation: letter-breathe 5s infinite;
     position: fixed;
     width:5%;
     height: 100%;
-    /*background: linear-gradient(rgb(248, 234, 228), rgb(48, 37, 37));*/
-    background: linear-gradient( /*rgb(235, 255, 102)*/ rgb(159, 159, 86) 35%, rgb(255, 255, 255) 60% );
+    background: linear-gradient( rgb(235, 255, 102) , rgb(255, 255, 255) 60% );
         border-top: none;
     border-bottom: none;
     /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233); */
@@ -481,15 +480,15 @@ margin: 5%;
     z-index: 2;
     height: 500px;
     width: 350px;
-    transition: height 1s;
-    transition: width 1s;
+    transition: height 0.8s;
+    border-radius: 10px;
 }
 
 .block:not(:hover) {
     width: 180px;
 height: 200px;
-transition: width 0.6s;
-transition: height 0.6s;
+transition: width 0.8s;
+transition: height 0.8s;
 z-index: 1;
 }
 

@@ -78,9 +78,9 @@ font-size: 40px;
 .image-home {
 box-shadow: none;
 position: relative;
-margin-top: 80%;
-height: 60%;
-width: 100%;
+margin-top: 55%;
+height: 40%;
+width: 90%;
 }
 
 .box {
@@ -108,7 +108,7 @@ font-size: 18px;
     text-align: center;
     font-size: 5px;
     margin: 0%;
-    top: 30%;
+    top: 20%;
     padding: 50px;
     background: none;
  }
@@ -123,6 +123,7 @@ font-size: 18px;
  }
 
 .button-phone {
+    background: none;
     text-align: center;
  font-weight: 300;
  font-size: 15px;
@@ -179,6 +180,12 @@ font-size: 15px;
 margin: 10%;
 text-align: start;
 }
+
+.about p {
+    width: 100%;
+    margin-top: -20%;
+}
+
 
 
 }

@@ -78,7 +78,7 @@ font-size: 40px;
 .image-home {
 box-shadow: none;
 position: relative;
-margin-top: 55%;
+margin-top: 59%;
 height: 34%;
 width: 90%;
 }
@@ -108,7 +108,7 @@ font-size: 18px;
     text-align: center;
     font-size: 5px;
     margin: 0%;
-    top: 25%;
+    top:30%;
     padding: 50px;
     background: none;
  }

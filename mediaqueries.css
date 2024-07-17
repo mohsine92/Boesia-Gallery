@@ -24,7 +24,8 @@
    
 
     .nav a:first-child {
-        font-size: 18px;   
+        font-size: 18px; 
+        letter-spacing: -1.2px;  
          }
 
     .wrapper-img {
@@ -53,9 +54,8 @@
 @media screen and (max-width: 600px) {
 
 
-
 .loader {
-    font-size: 10px;
+    font-size: 12px;
     text-align: center;
     margin: 0%;
     font-weight: 100;
@@ -76,9 +76,9 @@ font-size: 40px;
 
 
 .image-home {
-    box-shadow: none;
-    position: sticky;
-margin-top: 100%;
+box-shadow: none;
+position: relative;
+margin-top: 80%;
 height: 60%;
 width: 100%;
 }
@@ -103,12 +103,14 @@ font-size: 18px;
  }
 
  .sub-header {
+    position: relative;
     display: block;
     text-align: center;
     font-size: 5px;
     margin: 0%;
+    top: 30%;
     padding: 50px;
-    bottom: 5%;
+    background: none;
  }
 
 
@@ -125,7 +127,6 @@ font-size: 18px;
  font-weight: 300;
  font-size: 15px;
  letter-spacing: -1px;
-
 }
 
 
@@ -161,8 +162,6 @@ display: none;
  }
 
 
-
-
 .bloki{
     display: flex;
 }
@@ -175,14 +174,11 @@ display: none;
     display: none;
 }
 
-
-
  .about {
 font-size: 15px;
 margin: 10%;
-text-align: end;
+text-align: start;
 }
-
 
 
 }

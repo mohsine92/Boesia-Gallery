@@ -261,9 +261,9 @@ animation: letter-breathe 5s infinite;
 .blockk {
     position: fixed;
     width:5%;
-    height: 90%;
-    background: linear-gradient( rgb(208, 208, 131) 0 , rgb(255, 255, 255) 95% );
-        border-top: none;
+    height: 100%;
+    background: linear-gradient(rgb(232, 198, 185) 0% ,rgb(240, 226, 221) 95%) ;
+    border-top: none;
     border-bottom: none;
     /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233); */
 }
@@ -356,8 +356,8 @@ animation: letter-breathe 5s infinite;
     width:5%;
     height: 100%;
     /*background: linear-gradient(rgb(248, 234, 228), rgb(48, 37, 37));*/
-    background: linear-gradient( /*rgb(235, 255, 102)*/ rgb(255, 255, 255) 20%, rgb(208, 208, 131) 100% ) ;
-        border-top: none;
+    background: linear-gradient( rgb(255, 255, 255) 0%, rgb(234, 191, 172) 100% );
+    border-top: none;
     border-bottom: none;
     /*box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.233); */
 }
@@ -480,15 +480,15 @@ margin: 5%;
     z-index: 2;
     height: 500px;
     width: 350px;
-    transition: height 0.8s;
+    transition:  0.6s;
     border-radius: 10px;
 }
 
 .block:not(:hover) {
     width: 180px;
 height: 200px;
-transition: width 0.8s;
-transition: height 0.8s;
+transition: width 3s;
+transition: height 3s;
 z-index: 1;
 }
 
@@ -777,11 +777,21 @@ background-size: cover;
 /* Gallery Phone Version*/
 
 .intro {
-    margin: 15%;
+margin: 15%;
 color: rgb(0, 0, 0);
 font-weight: 100;
 font-family: "Rocinante Titling", Arial, Helvetica, sans-serif;
-font-size: 10px;
+font-size: 20px;
+justify-content: center;
+}
+
+h6 {
+    padding: 15px;
+    border-radius: 20px;
+color: rgb(0, 0, 0);
+font-weight: 100;
+font-family: "Rocinante Titling", Arial, Helvetica, sans-serif;
+font-size: 13px;
 justify-content: center;
 }
   
@@ -871,7 +881,8 @@ text-align: right;
   cursor: vertical-text;
   width: 100%;
   margin: 0%;
-  background: linear-gradient( /*rgb(235, 255, 102)*/  rgba(0, 0, 0, 0.434) 30%, rgb(255, 255, 255) 100% );
+  background: linear-gradient( rgb(234, 191, 172) 0%, rgba(255, 255, 255, 0.794) 100% );
+  animation: letter-breathe 2s infinite;
 }
   
 
@@ -895,7 +906,8 @@ text-align: right;
     white-space: nowrap;
     padding: 0 6rem;
     font-family: "Rocinante Titling", Arial, Helvetica, sans-serif;
-    animation: move-rtl 10s linear infinite;
+    animation: move-rtl 10s linear infinite; 
+
   }
 
 
@@ -907,7 +919,7 @@ text-align: right;
   cursor: vertical-text;
   width: 100%;
   margin: 0%;
-  background: linear-gradient( rgb(255, 255, 255) , rgba(0, 0, 0, 0.434) 100% );
+  background: linear-gradient( rgb(255, 255, 255) 0%, rgb(234, 191, 172) 100% );
 }
 
 
@@ -942,7 +954,7 @@ animation: letter-breathe 3s infinite;
 
  #gallery-phone {
     align-items: center;
-    display: grid;
+    display: block;
     margin: auto;
  }
 
@@ -954,38 +966,6 @@ animation: letter-breathe 3s infinite;
 transition: height 1s;
 }
 
-/*.bloki:hover {
-    height: 500px;
-    width: auto;
-    transition: height 2s;
-}
-
-.bloki:not(:hover) {
-    height: 20px;
-    width: 70%;
-    transition: height 2s;
-    transition: width 2s;
-
-}*/
-
-
-
-   /*.bloki:hover {
-height: 600px;
-width: 300px;
-border-radius: 10%;
-transition: height 1s;
-transition: width 1s;
-   }
-
-
-.bloki:not(:hover) {
-    display: flex;
-    height: 500px;
-    width: 350px;
-    transition: height 1s;
-    transition: width 1s;
-       }*/
 
 .bloki:nth-child(1) {
 background: url(./picture/03D761A3-6500-4CB3-844B-2DCAA70D55AD.jpeg) no-repeat 50% 50%;

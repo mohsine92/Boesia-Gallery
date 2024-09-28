@@ -3,193 +3,211 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Boesia Gallery</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="mediaqueries.css"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Boesia Gallery</title>
     <link rel="icon" href="https://i.pinimg.com/564x/45/df/bd/45dfbd3bd869d8ff8ab455e160bb4454.jpg">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.0.2/TweenMax.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/2.0.2/anime.min.js"></script>
-    <script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+    <link rel="stylesheet" href="styles.css" />    
+    <link rel="stylesheet" href="mediaqueries.css" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Silkscreen:wght@400;700&display=swap" rel="stylesheet">
+
+
+     <!-- gsap / Scrolltrigger -->
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+
+     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+     
+     
   </head>
   <body>
-    <div class="wrapper">
-      <div class="nav">
-        <a class="link">©2024 BoesiaGallery, developped by Mohsine Essat.</a>
-        <a class="link">Boesia Gallery</a>
-    </div>
-      <div class="about">
-        <p>
-          self-taught photographer passionate about the art of photography, I welcome you to my gallery in which 
-          I share with you some shots from my latest film. ENJOY THE EXPERIENCE, ENJOY MY ART.
-            
-        </p>
+
+
+
+    <div class="hamburger-menu">
+      <div class="hamburger-icon" onclick="toggleMenu()">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <div class="menu-links">
+<img src="https://fleava.com/assets/img/general/ornament.svg" alt="">       <li><a href="./gallery.html" onclick="toggleMenu()"> The Gallery </a></li>
+       <br>
+
+       <li><a href="#" onclick="toggleMenu()"> Info </a></li>
+<br>
+       <li><a href="#" onclick="toggleMenu()"> Contact</a></li>
+       <br>
+       <p>Developped & Design By Mohsine</p>
       </div>
 
-      <div class="wrapper-img">
-        <div class="box"></div>
-        <div>
-            <img src="https://images.unsplash.com/photo-1720951068848-38fa1a084ad4?q=80&w=2753&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" class="image-home">
+      <br>
+      <br>
+<div class="logo">
+  <p>Boesia Gallery</p>
+</div>
+      <div class="pre-loader block">
+        <div class="loader-wrapper">
+          <div class="loader"></div>
         </div>
       </div>
-      <div class="sub-header">
-        <a href="mailto:mohsineessatpro@gmail.com" class="contact-link">→ Wanna be starting something ?</a>
-        <a href="https://mohsine92.github.io/m-artweb-/" class="work-link"> built by Mohsine Essat</a>
-        <div id="MyClockDisplay" class="clock" onload="showTime()"></div>
-        <div class="button" onclick="location.href='./gallery.html'"> GALLERY</div>
-        <div class="button-phone" onclick="location.href='./index3.html'"> GALLERY</div>
 
- 
-      </div> 
 
-    </div>
-    
-  
-<div class="container">
-    <div class="loader">art is coming please wait ...</div>
-    <div class="overlay">
-      <div class="blockk blockk-1"></div>
-      <div class="blockk blockk-2"></div>
-      <div class="blockk blockk-3"></div>
-      <div class="blockk blockk-4"></div>
-      <div class="blockk blockk-5"></div>
-      <div class="blockk blockk-6"></div>
-      <div class="blockk blockk-7"></div>
-      <div class="blockk blockk-8"></div>
-      <div class="blockk blockk-9"></div>
-      <div class="blockk blockk-10"></div>
-      <div class="blockk blockk-11"></div>
-      <div class="blockk blockk-12"></div>
-      <div class="blockk blockk-13"></div>
-      <div class="blockk blockk-14"></div>
-      <div class="blockk blockk-15"></div>
-      <div class="blockk blockk-16"></div>
-      <div class="blockk blockk-17"></div>
-      <div class="blockk blockk-18"></div>
-      <div class="blockk blockk-19"></div>
-      <div class="blockk blockk-20"></div>
-    </div>
-  </div>
-  
+      <div class="clipper-left">
+        <div class="loader-text">The Boesia</div>
+      </div>
 
-    <script>
-//Gallery
-
-      TweenMax.staggerFrom(
-        ".blockk",
-        0.8,
-        {
-          width: "0%",
-          ease: Power1.easeIn,
-          delay: 2,
-        },
-        0.04
-      );
-
-      TweenMax.to(".loader", 1, {
-        x: 2,
-        opacity: 0,
-        ease: Expo.easeInOut,
-        delay: 1.6,
-      });
-
-      TweenMax.staggerFrom(
-        ".nav > a, .about p, .sub-header,clock> a,img-home",
-        2,
-        {
-          opacity: 0,
-          y: 30,
-          ease: Expo.easeInOut,
-          delay: 3,
-        },
-        0.06
-      );
-
-     TweenMax.to(".box", 0.2, {
-        opacity: 1,
-        ease: Expo.easeInOut,
-        delay: 3.8,
-
-      });
-
-      TweenMax.to("img", 0.2, {
-        opacity: 1,
-        ease: Expo.easeInOut,
-        delay: 3.8,
-      });
-
-      TweenMax.to(".box", 2.4, {
-        y: "-100%",
-        ease: Expo.easeInOut,
-        delay: 4,
-        opacity:0,
-     });
+      <div class="clipper-right">
+        <div class="loader-text">Gallery</div>
+      </div>
 
 
 
 
+    <section>
+      <div class="presentation">
+        <div class="container-text">
+        </div>
+      </div>
+    </section>
 
-  //O'Clock
 
-  document.addEventListener("DOMContentLoaded", function () {
-    // Initialisez AOS
-    AOS.init({
-      once: true, // Animation ne se reproduit qu'une fois
-    });
-  });
-  
+      <div class="image-home">
+        <p>Inspired by art brut, Boesia is interested in spontaneous creations, without academic rules or constraints, highlighting the beauty of imperfection and authenticity.</p>
+          <img src="https://images.unsplash.com/photo-1725852878728-627efc1d3d97?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+        </div>
+        
+      </div>
 
-  function showTime(){ 
-    var location = "PARIS," 
-    var date = new Date(); 
-    var h = date.getHours(); // 0 - 23 
-    var m = date.getMinutes(); // 0 - 59 
-    var s = date.getSeconds(); // 0 - 59 
-    var session = "AM"; 
-    
-    if(h == 0){ 
-        h = 12; 
-    }
-    
-    if(h > 12){ 
-        h = h - 12; 
-        session = "PM"; 
-    }
-    
-    h = (h < 10) ? "0" + h : h; 
-    m = (m < 10) ? "0" + m : m;
-    s = (s < 10) ? "0" + s : s;
-    
-    var time = location + " " + h + ":" + m + ":" + s + " " + session;
-    
-    document.getElementById("MyClockDisplay").innerText = time;
-    document.getElementById("MyClockDisplay").textContent = time;
-    
-    setTimeout(showTime, 1000);
-    
+
+      <div class="scroll-container">
+        <p>Each exhibition highlights photos that capture the essence of the city: abandoned everyday objects, forgotten human traces, and spontaneous street scenes. These raw images translate an unfiltered reality, evoking the power of raw art.</p>
+        <img src="https://images.unsplash.com/photo-1712585059042-12d8c7e8980d?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      </div>
+
+
+
+  </body>
+
+ <script>
+
+
+
+  //Hamburger menu 
+
+function toggleMenu() {
+
+const menu = document.querySelector(".menu-links");
+const icon = document.querySelector(".hamburger-icon");
+menu.classList.toggle("open");
+icon.classList.toggle("open");
+
 }
 
-showTime();
+
+
+
+
+    gsap.to(".clipper-left", 2, {
+      delay: 2,
+      clipPath: "inset(0 100% 0 0)",
+      ease: "power4.inOut",
+    });
+
+    gsap.to(".clipper-right", 2, {
+      delay: 2,
+      clipPath: "inset(0 0 0 100%)",
+      ease: "power4.inOut",
+    });
+
+    gsap.from(".loader-wrapper", 2, {
+      scale: 0.9,
+      ease: "power1.inOut",
+    });
+
+    gsap.from(".loader", 2.5, {
+      top: "100%",
+      ease: "power3.inOut",
+    });
+
+    gsap.to(
+      ".loader-wrapper, .pre-loader",
+      0.2,
+      {
+        opacity: 0,
+        display: "none",
+        ease: "power3.inOut",
+        delay: 2.1,
+      },
+      "-=1"
+    );
+
+
+    gsap.from("nav, .container-text, nav, .image-home, .hamburger-icon, .logo", 1, {
+      opacity: 0,
+      delay: 3,
+      x: 40,
+      ease: "power4.inOut",
+      stagger: {
+        amount: 0.5,
+      },
+    });
+
+    document.addEventListener("DOMContentLoaded", (event) => {
+  gsap.registerPlugin(ScrollTrigger)
+  gsap.to(" .image-home img ", {
+        y: "-10%",
+        x: 100,
+        scale: 1,
+        ease: "none",
+
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "100vh top",
+          scrub: 1,
+        },
+      });
+
+
+      gsap.to(" .scroll-container img  ", {
+        y: "-10%",
+        x: 50 ,
+        scale: 1,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "100vh top",
+          scrub: 1,
+        },
+      });
+
+ });
+    
+    
+
+    
+ gsap.to(".logo", {
+        y: "50%",
+        scale: 0.8,
+        ease: "none",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "100vh top",
+          scrub: 1.1,
+        },
+      });
+
 
     
 
-let $text = $('.text'),
-	$text1 = new SplitText($text.eq(0), {type:"words,chars"}), 
-    chars1 = $text1.chars;
-let	$text2 = new SplitText($text.eq(1), {type:"words,chars"}), 
-    chars2 = $text2.chars;
 
 
-let tlHover = new TimelineMax({paused:true})
-	.staggerTo(chars1, 0.8, {yPercent: -100, ease:  Power3.easeInOut}, 0.03)
-	.staggerFrom(chars2, 0.8, {yPercent: 100, ease:  Power3.easeInOut}, 0.03,.1);
 
-$text.hover(function(){
-	tlHover.play();
-}, function(){
-	
-	tlHover.reverse();
-})
-    </script>
-  </body>
+
+ </script>
+
 </html>

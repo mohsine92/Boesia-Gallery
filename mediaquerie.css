@@ -65,18 +65,27 @@ nav {
         }
 
         .slider {
-            width: 60%;
-            left: 0%;
+            width: 50%;
+            left: -22%;
             position: relative;
             cursor: crosshair;
 
           }
 
+
+
+          .slider-item {
+            display: inline-flex;
+            width: 50vw;
+            height: 10vw;
+          
+            padding: 3vw;
+          }
+
         .slider-item figure {
             position: relative;
-            padding-bottom: 120%;
+            padding-bottom: 200%;
             padding-right: 100%;
-
             overflow: hidden;
           }
           
@@ -112,6 +121,7 @@ nav {
 figure {
     height: 120%;
     width: 400%;
+
   
   }
   
@@ -121,7 +131,7 @@ figure {
     object-fit: cover;
   }
 
-}
+
 
 
 .overlay {
@@ -145,3 +155,5 @@ figure {
     font-size: 13px !important;
     text-align: center;
   }
+
+}

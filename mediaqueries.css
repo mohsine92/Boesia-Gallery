@@ -150,7 +150,7 @@ text-align: center;
         justify-content: space-between;
         height: auto;
         width: auto;
-        left: 23vh;
+        left: 20vh;
         top: 15px;
         margin: 0%;
         padding: 30%;
@@ -166,7 +166,7 @@ text-align: center;
 
 .hamburger-icon.open {
     position: relative;
-    left: 23vh;
+    left: 20vh;
     top: 15px;
   z-index: 10;
 
@@ -244,7 +244,7 @@ text-align: center;
     top: 80vh;
     width: 100%;
     left: auto;
-    right:33%;
+    right:35%;
     position: relative;
     font-size: 13px;
     

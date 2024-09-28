@@ -32,7 +32,7 @@ cursor: pointer;
 
 
 nav p {
-width: 70%;
+width: 90%;
 left: 2%;
 position: relative;
   text-decoration: none;
@@ -122,12 +122,12 @@ img {
 }
 
 figure:hover img {
-  filter:grayscale(100%);
+  filter:invert(100%);
   transition: 0.5s ease;
 }
 
 figure:not(:hover) img {
-  filter:grayscale(0%);
+  filter:invert(0%);
   transition: 0.5s ease;
 }
 

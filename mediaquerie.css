@@ -21,7 +21,7 @@
 
 body {
     background: url(https://i.pinimg.com/564x/81/88/56/8188561b30e700b239bfaea7ab5c1eba.jpg) center center  ;
-    background-size: 17%;
+    background-size: 14%;
 
 }
 
@@ -52,16 +52,16 @@ nav {
     padding: 1em;
     text-decoration: none;
     color: #000000;
-    font-size: 19px;
+    font-size: 20px;
   }
   
   
   
     nav p {
-        width: 200%;
+        width: 60%;
           color: #090909;
           mix-blend-mode: difference;
-          font-size: 9px;
+          font-size: 10px;
         }
 
         .slider {

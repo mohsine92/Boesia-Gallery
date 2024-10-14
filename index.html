@@ -5,20 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The Boesia Gallery</title>
-    <link rel="icon" href="https://i.pinimg.com/564x/45/df/bd/45dfbd3bd869d8ff8ab455e160bb4454.jpg">
+    <link rel="icon" href="https://i.pinimg.com/enabled/564x/e3/dc/e6/e3dce6e737f9cbee08ccaaef5ef7f4fd.jpg">
     <link rel="stylesheet" href="styles.css" />    
     <link rel="stylesheet" href="mediaqueries.css" />
 
      <!-- gsap / Scrolltrigger -->
      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
      
      
   </head>
   <body>
-
-
 
     <div class="hamburger-menu">
       <div class="hamburger-icon" onclick="toggleMenu()">
@@ -27,7 +26,6 @@
         <span></span>
       </div>
       <div class="menu-links">
-<img src="https://fleava.com/assets/img/general/ornament.svg" alt=""> 
 
       <li><a href="./gallery.html" onclick="toggleMenu()"> The Gallery </a></li>
        <br>
@@ -58,6 +56,7 @@
       </div>
 
 
+      <div id="three-container"></div>
 
 
     <section>
@@ -69,12 +68,12 @@
 
 
       <div class="image-home">
-        <p>Inspired by art brut, Boesia is interested in spontaneous creations, without academic rules or constraints, highlighting the beauty of imperfection and authenticity.</p>
+        <p>Inspired by <span>art</span> brut, Boesia is interested in spontaneous creations, without academic rules or constraints, highlighting the beauty of imperfection and authenticity.</p>
           <img src="https://images.unsplash.com/photo-1725852878728-627efc1d3d97?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
         </div>
         
       </div>
-
+      <div class="threejs-container" id="threejs-container"></div>
 
       <div class="scroll-container">
         <p>Each exhibition highlights photos that capture the essence of the city: abandoned everyday objects, forgotten human traces, and spontaneous street scenes. These raw images translate an unfiltered reality, evoking the power of raw art.</p>
@@ -82,8 +81,8 @@
       </div>
 
 
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
 
-  </body>
 
  <script>
 
@@ -139,7 +138,7 @@ icon.classList.toggle("open");
     );
 
 
-    gsap.from("nav, .container-text, nav, .image-home, .hamburger-icon, .logo", 1, {
+    gsap.from(" nav, .container-text, nav, .image-home, .hamburger-icon, .logo", 1, {
       opacity: 0,
       delay: 3,
       x: 40,
@@ -149,60 +148,169 @@ icon.classList.toggle("open");
       },
     });
 
-    document.addEventListener("DOMContentLoaded", (event) => {
-  gsap.registerPlugin(ScrollTrigger)
-  gsap.to(" .image-home img ", {
-        y: "-10%",
-        x: 100,
-        scale: 1,
-        ease: "none",
-
-        scrollTrigger: {
-          trigger: "body",
-          start: "top top",
-          end: "100vh top",
-          scrub: 1,
-        },
-      });
-
-
-      gsap.to(" .scroll-container img  ", {
-        y: "-10%",
-        x: 50 ,
-        scale: 1,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "body",
-          start: "top top",
-          end: "100vh top",
-          scrub: 1,
-        },
-      });
-
- });
-    
-    
-
     
  gsap.to(".logo", {
         y: "50%",
-        scale: 0.8,
+        scale: 2,
         ease: "none",
         scrollTrigger: {
           trigger: "body",
           start: "top top",
           end: "100vh top",
-          scrub: 1.1,
+          scrub: 2,
         },
       });
 
 
-    
+      gsap.to(".image-home img", {
+        y: "-100%",
+        scale: 0.1,
+        rotate:0,
+        ease: "power3.inOut",
+        scrollTrigger: {
+          trigger: "body",
+          start: "top top",
+          end: "100vh top",
+          scrub: 5,
+
+        },
+      });
 
 
 
+      gsap.to(".image-home p", {
+        x:"20%",
+        scale: 1,
+        rotate:0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".image-home",
+          start: "top top",
+          end: "100vh top",
+          scrub: 5,
+        },
+      });
+
+      gsap.to(".scroll-container p", {
+        y: "50%",
+        x:"20%",
+        scale: 1,
+        rotate:0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".image-home",
+          start: "top top",
+          end: "100vh top",
+          scrub: 5,
+        },
+      }); 
+
+
+
+
+
+      gsap.to(".scroll-container img", {
+       
+        scale: 1,
+        rotate:0,
+        ease: "none",
+        scrollTrigger: {
+          trigger: ".image-home",
+          start: "top top",
+          end: "100vh top",
+          scrub: 5,
+        },
+      }); 
+
+
+      const container = document.getElementById('threejs-container');
+const scene = new THREE.Scene();
+const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
+const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
+
+// Améliorer la netteté en réglant le ratio de pixels
+renderer.setPixelRatio(window.devicePixelRatio); // Rend l'image plus nette sur les écrans haute densité
+renderer.setSize(container.clientWidth, container.clientHeight);
+container.appendChild(renderer.domElement);
+
+const textureLoader = new THREE.TextureLoader();
+const texture = textureLoader.load('assets/35.jpeg'); // Assurez-vous que la texture est de haute résolution
+
+// Créer la géométrie du plan avec plus de segments pour plus de détails
+const geometry = new THREE.PlaneGeometry(3, 3, 128, 128);
+
+const material = new THREE.ShaderMaterial({
+    uniforms: {
+        uTime: { value: 0.0 },
+        uTexture: { value: texture },
+        uAmplitude: { value: 0.0 }
+    },
+    vertexShader: `
+        uniform float uTime;
+        uniform float uAmplitude;
+        varying vec2 vUv;
+        void main() {
+            vUv = uv;
+            vec3 pos = position;
+            pos.z += sin(pos.x * 4.0 + uTime) * uAmplitude;
+            pos.z += sin(pos.y * 5.0 + uTime) * uAmplitude;
+            gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
+        }
+    `,
+    fragmentShader: `
+        uniform sampler2D uTexture;
+        varying vec2 vUv;
+        void main() {
+            vec4 color = texture2D(uTexture, vUv);
+            gl_FragColor = color;
+        }
+    `,
+    side: THREE.DoubleSide,
+    transparent: true
+});
+
+const plane = new THREE.Mesh(geometry, material);
+scene.add(plane);
+
+camera.position.z = 3;
+
+let isHovered = false;
+let targetAmplitude = 0.0;
+let currentAmplitude = 0.0;
+
+function animate() {
+    if (isHovered) {
+        targetAmplitude = 0.5;
+    } else {
+        targetAmplitude = 0.0;
+    }
+
+    currentAmplitude += (targetAmplitude - currentAmplitude) * 0.1;
+    material.uniforms.uAmplitude.value = currentAmplitude;
+
+    material.uniforms.uTime.value += 0.05;
+    renderer.render(scene, camera);
+    requestAnimationFrame(animate);
+}
+
+animate();
+
+container.addEventListener('mouseenter', () => {
+    isHovered = true;
+});
+
+container.addEventListener('mouseleave', () => {
+    isHovered = false;
+});
+
+window.addEventListener('resize', () => {
+    camera.aspect = container.clientWidth / container.clientHeight;
+    camera.updateProjectionMatrix();
+    renderer.setSize(container.clientWidth, container.clientHeight);
+});
 
 
  </script>
+  </body>
 
 </html>

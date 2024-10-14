@@ -10,6 +10,9 @@ body {
   font-weight: 200;
 }
 
+
+
+
 nav {
 
   position: fixed;
@@ -54,8 +57,10 @@ figure p {
   color: #000000;
   bottom: 0;
   right: 0;
-  padding: 2em 5em;
+  padding: 1em 6em;
   font-size: 16px;
+
+  text-transform: uppercase;
 }
 
 .slider {
@@ -86,7 +91,6 @@ figure p {
   position: absolute;
   width: 100%;
   object-fit: cover;
-  border-radius: 30px;
 }
 
 .slider-progress {
@@ -116,25 +120,24 @@ figure {
 }
 
 img {
+  position: sticky;
   height: 100%;
   width: 100%;
   object-fit: cover;
 }
 
-figure:hover img {
+figure:hover  {
   filter:invert(100%);
   transition: 0.5s ease;
 }
 
-figure:not(:hover) img {
+figure:not(:hover)  {
   filter:invert(0%);
   transition: 0.5s ease;
 }
 
 .overlay {
-  border-radius: 30px;
-  border-bottom-left-radius: none;
-  border-bottom-right-radius: none;
+ 
 
   position: absolute;
   top: 0;
@@ -154,10 +157,13 @@ figure:not(:hover) img {
   text-align: center;
 }
 
-.slider-item:hover  img {
+.figure:hover   {
   transform: scale(1.1); /* Agrandir l'image au survol */
 }
 
-.slider-item:hover  .overlay {
+figure:hover  .overlay {
   opacity: 1; /* Afficher le texte et le fond au survol */
 }
+
+
+

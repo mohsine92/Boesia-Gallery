@@ -9,36 +9,25 @@
     <link rel="stylesheet" href="styles.css" />    
     <link rel="stylesheet" href="mediaqueries.css" />
 
-     <!-- gsap / Scrolltrigger -->
+     <!-- gsap / Scrolltrigger / ThreeJs -->
      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
      <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
      
      
   </head>
   <body>
 
-    <div class="hamburger-menu">
-      <div class="hamburger-icon" onclick="toggleMenu()">
-        <span></span>
-        <span></span>
-        <span></span>
-      </div>
-      <div class="menu-links">
+    <nav>
+      <li><a href="./gallery.html" onclick="toggleMenu()"> The Gallery</a></li>
+       <li><a href="https://mohsineess.eu/" onclick="toggleMenu()">Credit </a></li>
+      </nav>
 
-      <li><a href="./gallery.html" onclick="toggleMenu()"> The Gallery </a></li>
-       <br>
-       <li><a href="https://mohsineess.eu/" onclick="toggleMenu()"> Credit </a></li>
-<br>
-       <br>
-       <p>Developped & Design By Mohsine</p>
-      </div>
 
-      <br>
-      <br>
+
+      
 <div class="logo">
-  <p>Boesia Gallery</p>
+  <p>The 🄑ⓞᴱs𝗂a Galler𝓎</p>
 </div>
       <div class="pre-loader block">
         <div class="loader-wrapper">
@@ -56,261 +45,21 @@
       </div>
 
 
-      <div id="three-container"></div>
+     
 
-
-    <section>
-      <div class="presentation">
-        <div class="container-text">
-        </div>
-      </div>
-    </section>
-
-
-      <div class="image-home">
-        <p>Inspired by <span>art</span> brut, Boesia is interested in spontaneous creations, without academic rules or constraints, highlighting the beauty of imperfection and authenticity.</p>
-          <img src="https://images.unsplash.com/photo-1725852878728-627efc1d3d97?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
-        </div>
-        
-      </div>
       <div class="threejs-container" id="threejs-container"></div>
 
-      <div class="scroll-container">
-        <p>Each exhibition highlights photos that capture the essence of the city: abandoned everyday objects, forgotten human traces, and spontaneous street scenes. These raw images translate an unfiltered reality, evoking the power of raw art.</p>
-        <img src="https://images.unsplash.com/photo-1712585059042-12d8c7e8980d?q=80&w=3387&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="">
+      <div class="container-text">
+        <p>Inspired by art brut, Boesia is interested in spontaneous creations, without academic rules or constraints, highlighting the beauty of imperfection and authenticity. 
+          <br>
+           Each exhibition highlights photos that capture the essence of the city: abandoned everyday objects, forgotten human traces, 
+           and spontaneous street scenes. These raw images translate an unfiltered reality, evoking the power of raw art.
+          </p>
       </div>
 
 
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+ <script src="script.js"></script>
 
-
- <script>
-
-
-
-  //Hamburger menu 
-
-function toggleMenu() {
-
-const menu = document.querySelector(".menu-links");
-const icon = document.querySelector(".hamburger-icon");
-menu.classList.toggle("open");
-icon.classList.toggle("open");
-
-}
-
-
-
-
-
-    gsap.to(".clipper-left", 2, {
-      delay: 2,
-      clipPath: "inset(0 100% 0 0)",
-      ease: "power4.inOut",
-    });
-
-    gsap.to(".clipper-right", 2, {
-      delay: 2,
-      clipPath: "inset(0 0 0 100%)",
-      ease: "power4.inOut",
-    });
-
-    gsap.from(".loader-wrapper", 2, {
-      scale: 0.9,
-      ease: "power1.inOut",
-    });
-
-    gsap.from(".loader", 2.5, {
-      top: "100%",
-      ease: "power3.inOut",
-    });
-
-    gsap.to(
-      ".loader-wrapper, .pre-loader",
-      0.2,
-      {
-        opacity: 0,
-        display: "none",
-        ease: "power3.inOut",
-        delay: 2.1,
-      },
-      "-=1"
-    );
-
-
-    gsap.from(" nav, .container-text, nav, .image-home, .hamburger-icon, .logo, #threejs-container", 1, {
-      opacity: 0,
-      delay: 3,
-      x: 40,
-      ease: "power4.inOut",
-      stagger: {
-        amount: 0.5,
-      },
-    });
-
-    
- gsap.to(".logo", {
-        y: "50%",
-        scale: 2,
-        ease: "none",
-        scrollTrigger: {
-          trigger: "body",
-          start: "top top",
-          end: "100vh top",
-          scrub: 2,
-        },
-      });
-
-
-      gsap.to(".image-home img", {
-        y: "10%",
-        x:10,
-        ease: "power3.inOut",
-        scrollTrigger: {
-          trigger: "body",
-          start: "top top",
-          end: "100vh top",
-          scrub: 5,
-
-        },
-      });
-
-
-
-      gsap.to(".image-home p", {
-        x:"20%",
-        scale: 1,
-        rotate:0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".image-home",
-          start: "top top",
-          end: "100vh top",
-          scrub: 5,
-        },
-      });
-
-      gsap.to(".scroll-container p", {
-        y: "50%",
-        x:"20%",
-        scale: 1,
-        rotate:0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".image-home",
-          start: "top top",
-          end: "100vh top",
-          scrub: 5,
-        },
-      }); 
-
-
-
-
-
-      gsap.to(".scroll-container img", {
-       
-        scale: 1,
-        rotate:0,
-        ease: "none",
-        scrollTrigger: {
-          trigger: ".image-home",
-          start: "top top",
-          end: "100vh top",
-          scrub: 5,
-        },
-      }); 
-
-
-      const container = document.getElementById('threejs-container');
-const scene = new THREE.Scene();
-const camera = new THREE.PerspectiveCamera(75, container.clientWidth / container.clientHeight, 0.1, 1000);
-const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true });
-
-// Améliorer la netteté en réglant le ratio de pixels
-renderer.setPixelRatio(window.devicePixelRatio); // Rend l'image plus nette sur les écrans haute densité
-renderer.setSize(container.clientWidth, container.clientHeight);
-container.appendChild(renderer.domElement);
-
-const textureLoader = new THREE.TextureLoader();
-const texture = textureLoader.load('https://images.unsplash.com/photo-1542320868-5ded2628008a?q=80&w=3270&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D'); // Assurez-vous que la texture est de haute résolution
-
-// Créer la géométrie du plan avec plus de segments pour plus de détails
-const geometry = new THREE.PlaneGeometry(3, 3, 128, 128);
-
-const material = new THREE.ShaderMaterial({
-    uniforms: {
-        uTime: { value: 0.0 },
-        uTexture: { value: texture },
-        uAmplitude: { value: 0.0 }
-    },
-    vertexShader: `
-        uniform float uTime;
-        uniform float uAmplitude;
-        varying vec2 vUv;
-        void main() {
-            vUv = uv;
-            vec3 pos = position;
-            pos.z += sin(pos.x * 3.0 + uTime) * uAmplitude;
-            pos.z += sin(pos.y * 8.0 + uTime) * uAmplitude;
-            gl_Position = projectionMatrix * modelViewMatrix * vec4(pos, 1.0);
-        }
-    `,
-    fragmentShader: `
-        uniform sampler2D uTexture;
-        varying vec2 vUv;
-        void main() {
-            vec4 color = texture2D(uTexture, vUv);
-            gl_FragColor = color;
-        }
-    `,
-    side: THREE.DoubleSide,
-    transparent: true
-});
-
-const plane = new THREE.Mesh(geometry, material);
-scene.add(plane);
-
-camera.position.z = 3;
-
-let isHovered = false;
-let targetAmplitude = 0.0;
-let currentAmplitude = 0.0;
-
-function animate() {
-    if (isHovered) {
-        targetAmplitude = 0.5;
-    } else {
-        targetAmplitude = 0.0;
-    }
-
-    currentAmplitude += (targetAmplitude - currentAmplitude) * 0.1;
-    material.uniforms.uAmplitude.value = currentAmplitude;
-
-    material.uniforms.uTime.value += 0.05;
-    renderer.render(scene, camera);
-    requestAnimationFrame(animate);
-}
-
-animate();
-
-container.addEventListener('mouseenter', () => {
-    isHovered = true;
-});
-
-container.addEventListener('mouseleave', () => {
-    isHovered = false;
-});
-
-window.addEventListener('resize', () => {
-    camera.aspect = container.clientWidth / container.clientHeight;
-    camera.updateProjectionMatrix();
-    renderer.setSize(container.clientWidth, container.clientHeight);
-});
-
-
-
- </script>
   </body>
 
 </html>

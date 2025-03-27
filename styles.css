@@ -10,203 +10,81 @@
   height: 100vh;
 }*/
 
-body {
-  height:195vh;
-  background: url(https://i.pinimg.com/564x/81/88/56/8188561b30e700b239bfaea7ab5c1eba.jpg) center center  ;
 
-background-size: 8%
+body {
+  height: 50vh;
+  mix-blend-mode: normal;
+  background-color: #FCFCFC;
 }
 
+
+
+
+::selection {
+  background-color: #000000;
+  color: white
+}
 
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
 
-/*HAMBURGER MENU*/
 
-#hamburger-nav {
-  display: none;
-}
- 
-.hamburger-menu {
-  display: inline-block;
-}
-
-.hamburger-icon {
-  display:flex;
-  flex-direction: column;
-  justify-content: space-between;
-  height: auto;
-  width: auto;
-  left: 150vh;
-  top: 50px;
-  margin: 0%;
-  padding: 30%;
-
-  align-items: center;
-  cursor: pointer;
-  position:relative;
-  z-index: 1;
-
+nav {
+display: flex;
+position: absolute;
+top: 20px;
+left: 85%;
+background-color: rgba(230, 230, 230, 0.593);
+border: 0.8px solid black;
+border-radius: 30px;
+padding: 15px;
+gap: 0.8em;
+list-style-type: none;
 }
 
-.hamburger-icon span{
-overflow-y: hidden;
-  width: 60px;
-  border-radius: 10px;
-  margin: 3px;
-  border: 2px solid rgb(0, 0, 0);
-  transition: all 0.2s ease-in-out;
-
-}
-
-.hamburger-icon.open {
-
-  position: relative;
-  left: 150vh;
- top: 50px;
-z-index: 7  ;
-}
-
-
-
-.menu-links{
-  display: flex;
-  background-size: 8%;
-background: linear-gradient( rgb(227, 227, 227) 0%, rgb(243, 243, 243) 100% ) ;
-width: 100%;
-  height: 110%;
-  left: 0%;
-  top: 0%;
-  max-height: 0;
-  overflow:hidden;
-  transition: all 800ms ease;
-position: fixed;
-gap: 3rem;
-z-index: 6 !important;
-
-}
-
-
-.menu-links a{
-text-align: center;
- color: rgb(0, 0, 0);
+nav a {
+  text-transform: capitalize;
+  list-style-type: none;
   text-decoration: none;
-  text-transform:lowercase;
-  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  letter-spacing: -1px;
-margin: auto;
-font-weight: 150;
-top: 40vh;
-left: 50vh;
-width: 100%;
-position: relative;
-font-size: 6rem;
-
-}
-
-
-
-
-.menu-links a:hover{
-color: rgb(255, 255, 255); 
-transition: all 0.3s;
-  }
-  
-
-
-
-.menu-links a:not(:hover){
-  color: rgb(0, 0, 0); 
-  transition: all 1s;
-    }
-    
-
-
-.menu-links p{
-  display: flex;
   text-align: center;
-  color: rgb(0, 0, 0);
-  transition: all 0.5s ease-in-out;
-  text-decoration: none;
-  text-transform:capitalize;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-letter-spacing: -1px;
-font-weight: 300;
-top: 96vh;
-right: 7vh;
-position: relative;
-z-index: 3;
-font-size: 20px;
+  color: #000000;
+  font-weight: 200;
+  font-size: 25px;
+  font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif ;
 
 }
 
-
-
-.menu-links li{
-  list-style: none;
-
-}
-
-
-.menu-links.open {
-
-position: fixed;
-  max-height: 100%;
-  z-index: 2;
-}
-
-
-
-.hamburger-icon.open span:first-child {
-  transform: rotate(45deg) translate(10px, 5px);
+nav p {
+  font-size: 20px;
+  font-weight: 100;
+  text-align: center;
 
 }
-
-.hamburger-icon.open span:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger-icon.open span:last-child {
-  transform: rotate(-45deg) translate(10px, -5px);
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
-.hamburger-icon span:first-child {
-  opacity: 1;
-}
-
-.hamburger-icon span:first-child {
-  transform: none;
-}
-
 
 .logo {
-  z-index: 1;
-  color: rgb(255, 255, 255);
-  font-size: 50px;
+  color: rgb(215, 215, 215) ;
+ font-size: 120px;
+ font-weight: 100;
   text-align: center;
-  left: 40%;
+  left: 15px;
   position: fixed;
   top: 5%;
 font-family: Helvetica;
- letter-spacing: -4px;
- mix-blend-mode: difference;
+ letter-spacing: -8px;
 }
 
 .clipper-left {
 
   position: absolute;
   top: 10%;
-   left:7%;
-  width: 55vw;
+   left:6%;
+  width: 86vw;
   height: 80vh;
-  background:rgb(0, 0, 0) ;
   overflow: clip;
   clip-path: inset(0 0 0 0);
   display: flex;
   justify-content: flex-start;
+  border-radius: 30%;
+  border: 0.8px solid black;
 
 }
 
@@ -222,168 +100,25 @@ font-family: Helvetica;
   padding: 4em 16rem;
   display: flex;
   align-items: center;
-  color: rgb(255, 255, 255);
-
+  color: rgb(0, 0, 0);
+border: 0px;
 }
 
 .clipper-right {
-
+  border-top: 0px solid black;
   position: absolute;
   top: 10%;
   right: 5%;
   width:55vw ;
   height: 80vh;
-  background:rgb(0, 0, 0) ;
+
   overflow: clip;
   clip-path: inset(0 0 0 0);
   display: flex;
+  border-radius: 20%;
   justify-content: flex-start;
 
 
-}
-
-
-.image-home {
-  border-radius: 10px;
-  position: absolute;
-  top: 40%;
-  height: 100%;
-  width: 60%;
-  left: 30%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  
-}
-
-
-.image-home p {
-  position: absolute;
-  top:30%;
-  object-fit: contain;
-  left: 65%;
-  width: 30%;
- font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
- color: #000000;
- font-weight: 300;
- z-index: 1;
-}
-
-.image-home img {
-  height:50%;
-  width: auto;
-  top: 0%;
-  right: 17%;
-  position: relative;
-  opacity: 1; /* L'image est invisible au départ */
-
-}
-
-
-.presentation {
-  top: 36%;
-  height: 30%;
-  width: 100%;
-  position: absolute;
-
-}
-
-.container-text {
-  height: 70% ;
-  width: 100%;
-  left: 0%;
-  position: relative;
-  justify-content: center;
-  display: flex;
-  z-index: 1;
-
-  mix-blend-mode: difference;
-
-}
-
-
-.container-text p {
-  text-align: center;
-  font-weight: 200;
-  font-family: 'Helvetica Neue', sans-serif;
-  text-transform: lowercase ;
-}
-
-
-.scroll-container {
-  z-index: -10;
-  gap: 20rem;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 80%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-
-
-
-.scroll-container img {
-  scale: 0;
-  height:70%;
-  width: auto;
-  margin-top: -10%;
-  left:10%;
-  position: relative;
-}
-
-
-
-.scroll-container p {
-
-  z-index: 5;
-  color: rgb(0, 0, 0);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 16px;
-  width: 30%;
-  position: relative;
-right: 0%;
-left: -8%;
-top: 10%;
-  font-weight: 300;
-  text-align: start;
-}
-
-
-
-
-.scroll-container2 {
-  position: relative;
-  width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: linear-gradient( #ffffff  10%,rgb(234, 232, 0)  80% );
-}
-
-
-.scroll-container2 p {
-  color: #ffffff;
-  font-weight: 100;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-  font-size: 100px;
-
-}
-
-.site-nav {
-  border: 1px solid white;
-  height: 20px;
-  margin: 5%;
-  mix-blend-mode: difference;
-
-
-}
-
- a {
-  padding: 0%;
 }
 
 
@@ -432,19 +167,44 @@ margin-top: 0;
 
 
 
-/* Three Js */
-
-
-.threejs-container {
+#threejs-container {
   position: absolute;
-  top: 10%;
-  right: 65%;
-  margin-left: 3%;
-  width: 40%;
-  height: 50%;
+  top: 20%;
+  left: 25%;
+  width: 45vw;
+  height: 65%;
+  transform: translate(0%, 0%);
+  overflow: hidden;
+  border-radius: 18px;
+  margin: 0%;
+  transition: transform 0.3s ease;
+  cursor:crosshair;
 
+ filter: invert(0%);
+  
 }
 
+.container-text {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+text-align: center;
+width: 50%;
+height: 20%;
+}
+
+
+ .container-text p{
+  text-align: center;
+  position: absolute;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  overflow: hidden;
+  color: rgb(0, 0, 0);
+  font-weight: 200;
+  mix-blend-mode: normal;
+
+}
 
 
 @media (max-width: 900px) {
